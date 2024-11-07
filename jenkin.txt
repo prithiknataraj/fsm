@@ -1,0 +1,103 @@
+JENKINS
+
+sudo apt-get install jenkins
+sudo apt-get install fontconfig openjdk-17-jre (if Java doesnt exist)
+
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+Go to https://localhost:8080 - default Jenkins server
+
+It will ask for the authentication key. Copy the path and use command
+
+sudo cat “paste_the_path_here”
+
+Paste the key from terminal to the Jenkins server
+
+Create an account with username and password
+
+—------------------------------------------------------------------------
+
+Create a repository with a Java file
+For eg: https://github.com/ssnlabs/jenkins.git
+
+Jenkins
+Click New Item
+Give a name and select Freestyle Project
+ Select Github project and paste repository name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Select Git, Under Credentials, Click Add & Jenkins
+Change “Branch Specifier” to */main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Enter your github username and password
+
+
+
+
+
+
+
+
+
+
+Add * * * * * under Build Periodically -> Schedule (Cron Job - triggers a build every minute)
+
+
+
+
+
+
+
+
+
+Under Build Step -> Select Execute Shell and enter the following
+
+
+
+
+
+
+
+
+
+Give Save and Build Now in next page
+Enjoy! 
